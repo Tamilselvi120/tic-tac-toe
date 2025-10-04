@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+  <div class="container">
+    <!-- Home Page -->
+    <div id="home">
+      <h1>Tic Tac Toe Game</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Tic_tac_toe.svg" alt="Tic Tac Toe">
+      <br>
+      <button onclick="goToMode()">Start</button>
+    </div>
+
+    <!-- Mode Selection Page -->
+    <div id="mode" class="hidden">
+      <h2>Select Mode</h2>
+      <button onclick="startGame('computer')">Player vs Computer</button>
+      <button onclick="startGame('player')">Player vs Player</button>
+    </div>
+
+    <!-- Game Page -->
+    <div id="game" class="hidden">
+      <div class="players">
+        <span id="playerX" class="active">Player (X)</span> | 
+        <span id="playerO">Opponent (O)</span>
+      </div>
+      <div class="status">Player X's turn</div>
+      <div class="board" id="board"></div>
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="resetGame()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
